@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -13,8 +12,9 @@ import CreativeSection from "@/components/section/creative-section";
 import IntellectualSection from "@/components/section/intellectual-section";
 import LiteratureSection from "@/components/section/literature-section";
 import SecuritySection from "@/components/section/security-section";
-import { ArrowUpRight, Code2, ShieldAlert, Palette, Brain, BookOpen } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import HeroAvatar from "@/components/hero-avatar";
+import DimensionNav from "@/components/dimension-nav";
+import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -24,7 +24,7 @@ export default function Page() {
       {/* 1. HERO SECTION */}
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
+          <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between items-center md:items-start">
             <div className="gap-2 flex flex-col order-2 md:order-1">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
@@ -33,16 +33,13 @@ export default function Page() {
                 text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
               />
               <BlurFadeText
-                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
+                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl leading-relaxed"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <HeroAvatar />
             </BlurFade>
           </div>
         </div>
@@ -62,50 +59,9 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 3. FOUR DIMENSIONS QUICK JUMP PILLS */}
+      {/* 3. FOUR DIMENSIONS FLOATING STICKY SCROLLSPY BAR */}
       <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
-        <div className="flex items-center justify-center">
-          <nav
-            aria-label="Portfolio Dimensions"
-            className="inline-flex flex-wrap items-center justify-center gap-1 sm:gap-1.5 p-1.5 rounded-full border border-border/60 bg-muted/30 dark:bg-muted/15 backdrop-blur-md shadow-xs"
-          >
-            <a
-              href="#engineering"
-              className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-xs border border-transparent hover:border-border/50 transition-all duration-200"
-            >
-              <span className="size-1.5 rounded-full bg-sky-500/70 group-hover:bg-sky-500 transition-colors" />
-              <span>Engineering</span>
-            </a>
-            <a
-              href="#security"
-              className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-xs border border-transparent hover:border-border/50 transition-all duration-200"
-            >
-              <span className="size-1.5 rounded-full bg-rose-500/70 group-hover:bg-rose-500 transition-colors" />
-              <span>Security</span>
-            </a>
-            <a
-              href="#creative"
-              className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-xs border border-transparent hover:border-border/50 transition-all duration-200"
-            >
-              <span className="size-1.5 rounded-full bg-violet-500/70 group-hover:bg-violet-500 transition-colors" />
-              <span>Creative</span>
-            </a>
-            <a
-              href="#intellectual"
-              className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-xs border border-transparent hover:border-border/50 transition-all duration-200"
-            >
-              <span className="size-1.5 rounded-full bg-emerald-500/70 group-hover:bg-emerald-500 transition-colors" />
-              <span>Intellectual</span>
-            </a>
-            <a
-              href="#literature"
-              className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-xs border border-transparent hover:border-border/50 transition-all duration-200"
-            >
-              <span className="size-1.5 rounded-full bg-amber-500/70 group-hover:bg-amber-500 transition-colors" />
-              <span>Literature</span>
-            </a>
-          </nav>
-        </div>
+        <DimensionNav />
       </BlurFade>
 
       {/* ===== DIMENSION 1: ENGINEERING ===== */}
@@ -138,20 +94,20 @@ export default function Page() {
                     href={education.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-x-3 justify-between group"
+                    className="flex items-center gap-x-3 justify-between group rounded-xl p-2 transition-all hover:bg-muted/30"
                   >
                     <div className="flex items-center gap-x-3 flex-1 min-w-0">
                       {education.logoUrl ? (
                         <img
                           src={education.logoUrl}
                           alt={education.school}
-                          className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
+                          className="size-8 md:size-10 p-1 border rounded-full shadow-xs ring-2 ring-border/50 overflow-hidden object-contain flex-none transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 group-hover:shadow-md"
                         />
                       ) : (
-                        <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
+                        <div className="size-8 md:size-10 p-1 border rounded-full shadow-xs ring-2 ring-border/50 bg-muted flex-none" />
                       )}
                       <div className="flex-1 min-w-0 flex flex-col gap-0.5">
-                        <div className="font-semibold leading-none flex items-center gap-2">
+                        <div className="font-semibold leading-none flex items-center gap-2 text-foreground group-hover:text-primary transition-colors">
                           {education.school}
                           <ArrowUpRight
                             className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
@@ -163,7 +119,7 @@ export default function Page() {
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
+                    <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none font-mono">
                       <span>
                         {education.start} - {education.end}
                       </span>

@@ -191,7 +191,7 @@ export const DATA = {
   projects: [
     {
       title: "Pixora AI",
-      href: "https://pixora.ai",
+      href: "https://pixora-artistry.lovable.app/",
       dates: "2024 - Present",
       active: true,
       description:
