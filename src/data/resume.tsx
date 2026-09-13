@@ -13,15 +13,16 @@ import { Java } from "@/components/ui/svgs/java";
 import { Csharp } from "@/components/ui/svgs/csharp";
 
 export const DATA = {
- name: "Haider Alanisi",
-initials: "HA",
-url: "https://portfolio-ten-mauve-xbap89iflq.vercel.app",
-location: "Karbala, Iraq",
-locationLink: "https://www.google.com/maps/place/Karbala",
-description:
-  "Senior Backend & Full-Stack Engineer specializing in Node.js, TypeScript, and distributed microservices architectures.",
-summary:
-  "Senior Software Engineer with extensive experience building high-throughput APIs, fault-tolerant transaction systems, and modern web architectures. Proven track record in asynchronous, remote-first environments delivering scalable digital products and secure cloud backends.",
+  name: "Haider Alanisi",
+  initials: "HA",
+  url: "https://portfolio-ten-mauve-xbap89iflq.vercel.app",
+  location: "Karbala, Iraq",
+  locationLink: "https://www.google.com/maps/place/Karbala",
+  description:
+    "Senior Backend & Full-Stack Engineer specializing in Node.js, TypeScript, and distributed microservices architectures.",
+  summary:
+    "Senior Software Engineer with extensive experience building high-throughput APIs, fault-tolerant transaction systems, and modern web architectures. Proven track record in asynchronous, remote-first environments delivering scalable digital products and secure cloud backends.",
+  avatarUrl: "https://avatars.githubusercontent.com/u/abulara7",
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
