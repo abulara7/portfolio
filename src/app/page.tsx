@@ -64,38 +64,38 @@ export default function Page() {
 
       {/* 3. FOUR DIMENSIONS QUICK JUMP PILLS */}
       <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
-        <div className="flex flex-wrap items-center justify-center gap-2 p-2 rounded-2xl border bg-muted/30 backdrop-blur-sm">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 p-2 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-md shadow-xs">
           <a
             href="#engineering"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-background hover:bg-muted border border-border/60 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/25 hover:border-blue-500/50 hover:shadow-[0_0_15px_-3px_rgba(59,130,246,0.3)] transition-all"
           >
             <Code2 className="size-3.5 text-blue-500" />
             <span>Engineering</span>
           </a>
           <a
             href="#security"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-background hover:bg-muted border border-border/60 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/25 hover:border-rose-500/50 hover:shadow-[0_0_15px_-3px_rgba(244,63,94,0.3)] transition-all"
           >
-            <ShieldAlert className="size-3.5 text-red-500" />
+            <ShieldAlert className="size-3.5 text-rose-500" />
             <span>Security</span>
           </a>
           <a
             href="#creative"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-background hover:bg-muted border border-border/60 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 border border-purple-500/25 hover:border-purple-500/50 hover:shadow-[0_0_15px_-3px_rgba(168,85,247,0.3)] transition-all"
           >
             <Palette className="size-3.5 text-purple-500" />
             <span>Creative</span>
           </a>
           <a
             href="#intellectual"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-background hover:bg-muted border border-border/60 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/25 hover:border-emerald-500/50 hover:shadow-[0_0_15px_-3px_rgba(16,185,129,0.3)] transition-all"
           >
             <Brain className="size-3.5 text-emerald-500" />
             <span>Intellectual</span>
           </a>
           <a
             href="#literature"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-background hover:bg-muted border border-border/60 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/25 hover:border-amber-500/50 hover:shadow-[0_0_15px_-3px_rgba(245,158,11,0.3)] transition-all"
           >
             <BookOpen className="size-3.5 text-amber-500" />
             <span>Literature</span>
@@ -212,8 +212,8 @@ export default function Page() {
       </div>
 
       {/* DIMENSION DIVIDER */}
-      <div className="relative py-4">
-        <Separator className="opacity-40" />
+      <div className="relative py-4 flex items-center justify-center">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-rose-500/30 to-transparent" />
       </div>
 
       {/* ===== SECURITY & RESEARCH ===== */}
@@ -222,8 +222,8 @@ export default function Page() {
       </BlurFade>
 
       {/* DIMENSION DIVIDER */}
-      <div className="relative py-4">
-        <Separator className="opacity-40" />
+      <div className="relative py-4 flex items-center justify-center">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
       </div>
 
       {/* ===== DIMENSION 2: CREATIVE ===== */}
@@ -232,8 +232,8 @@ export default function Page() {
       </BlurFade>
 
       {/* DIMENSION DIVIDER */}
-      <div className="relative py-4">
-        <Separator className="opacity-40" />
+      <div className="relative py-4 flex items-center justify-center">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
       </div>
 
       {/* ===== DIMENSION 3: INTELLECTUAL ===== */}
@@ -242,8 +242,8 @@ export default function Page() {
       </BlurFade>
 
       {/* DIMENSION DIVIDER */}
-      <div className="relative py-4">
-        <Separator className="opacity-40" />
+      <div className="relative py-4 flex items-center justify-center">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
       </div>
 
       {/* ===== DIMENSION 4: LITERATURE ===== */}
@@ -252,8 +252,8 @@ export default function Page() {
       </BlurFade>
 
       {/* CONTACT SECTION */}
-      <div className="relative py-4">
-        <Separator className="opacity-40" />
+      <div className="relative py-4 flex items-center justify-center">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       </div>
       <section id="contact">
         <BlurFade delay={BLUR_FADE_DELAY * 18}>
