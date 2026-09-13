@@ -78,19 +78,8 @@ summary:
     },
   },
 
-  work: [
-    {
-company: "Freelance / Independent Consultant",
-href: "https://www.linkedin.com/in/abulara98",
-badges: ["Remote"],
-location: "Remote",
-title: "Senior Backend & Full-Stack Engineer",
-start: "2021",
-end: "Present",
-description:
-  "Architected high-throughput backend services and modern web applications using Node.js, TypeScript, and Next.js. Delivered resilient distributed systems and API architectures.",
-    },
-    {
+work: [
+      {
         company: "Autonomous Engineering Consultant",
         href: "https://www.linkedin.com/in/abulara98",
         badges: ["Remote"],
@@ -125,32 +114,8 @@ description:
         end: "2021",
         description:
           "Developed end-to-end full-stack web applications with React, Next.js, and Node.js. Built robust role-based access control (RBAC), third-party API integrations, and event-driven logging solutions with 99.9% uptime compliance.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
-    },
-  ],
+      },
+    ],
   education: [
     {
       school: "Buildspace",
