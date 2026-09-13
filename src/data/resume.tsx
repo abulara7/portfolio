@@ -22,7 +22,7 @@ export const DATA = {
     "Senior Backend & Full-Stack Engineer specializing in Node.js, TypeScript, and distributed microservices architectures.",
   summary:
     "Senior Software Engineer with extensive experience building high-throughput APIs, fault-tolerant transaction systems, and modern web architectures. Proven track record in asynchronous, remote-first environments delivering scalable digital products and secure cloud backends.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/abulara7",
+  avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
@@ -86,7 +86,7 @@ work: [
         badges: ["Remote"],
         location: "Remote",
         title: "Lead System Architect & Senior Full-Stack Engineer",
-        logoUrl: "/work.png",
+        logoUrl: "/atomic.png",
         start: "2023",
         end: "Present",
         description:
@@ -98,7 +98,7 @@ work: [
         badges: ["Remote"],
         location: "Remote",
         title: "Senior Backend & Cloud Systems Engineer",
-        logoUrl: "/work.png",
+        logoUrl: "/NextGen.svg",
         start: "2021",
         end: "2023",
         description:
@@ -110,7 +110,7 @@ work: [
         badges: ["Remote"],
         location: "Remote",
         title: "Full-Stack Software Engineer",
-        logoUrl: "/work.png",
+        logoUrl: "/Tech.svg",
         start: "2019",
         end: "2021",
         description:
@@ -119,43 +119,43 @@ work: [
     ],
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
-      start: "2023",
+      school: "University of Karbala",
+      href: "https://uokerbala.edu.iq",
+      degree: "Bachelor's Degree in College Of Science / Department Of Chemistry ",
+      logoUrl: "https://uokerbala.edu.iq/customcode/footer/images/logo.jpg",
+      start: "2020",
       end: "2024",
     },
     {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
+      school: "University of Kufa",
+      href: "https://uokufa.edu.iq",
+      degree: "Master's Degree of Organic Chemistry (M.Sc.)",
+      logoUrl: "https://uokufa.edu.iq/wp-content/uploads/2018/12/banner_v2.jpg",
+      start: "2026",
+      end: "2028",
+    },
+    {
+      school: "microsoft",
+      href: "https://learn.microsoft.com",
+      degree: "Foundational C# Certification",
+      logoUrl: "/microsoft.png",
+      start: "2022",
+      end: "2022",
+    },
+    {
+      school: "Cloud & Distributed Systems",
+      href: "https://www.coursera.org",
+      degree: "Microservices Architecture & Distributed Systems Specialization",
       logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
+      start: "2023",
+      end: "2024",
     },
   ],
   projects: [
       {
         title: "Pixora AI",
-        href: "https://pixora.ai",
-        dates: "2024 - Present",
+        href: "https://pixora-artistry.lovable.app",
+        dates: "2026 - Present",
         active: true,
         description:
           "An advanced, all-in-one AI workspace integrating 40+ generative AI tools, dynamic workflows, and automated pipeline utilities in a unified high-speed dashboard.",
@@ -170,7 +170,7 @@ work: [
         links: [
           {
             type: "Website",
-            href: "https://pixora.ai",
+            href: "https://pixora-artistry.lovable.app",
             icon: null,
           },
         ],
