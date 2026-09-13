@@ -64,42 +64,47 @@ export default function Page() {
 
       {/* 3. FOUR DIMENSIONS QUICK JUMP PILLS */}
       <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 p-2 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-md shadow-xs">
-          <a
-            href="#engineering"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/25 hover:border-blue-500/50 hover:shadow-[0_0_15px_-3px_rgba(59,130,246,0.3)] transition-all"
+        <div className="flex items-center justify-center">
+          <nav
+            aria-label="Portfolio Dimensions"
+            className="inline-flex flex-wrap items-center justify-center gap-1 sm:gap-1.5 p-1.5 rounded-full border border-border/60 bg-muted/30 dark:bg-muted/15 backdrop-blur-md shadow-xs"
           >
-            <Code2 className="size-3.5 text-blue-500" />
-            <span>Engineering</span>
-          </a>
-          <a
-            href="#security"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/25 hover:border-rose-500/50 hover:shadow-[0_0_15px_-3px_rgba(244,63,94,0.3)] transition-all"
-          >
-            <ShieldAlert className="size-3.5 text-rose-500" />
-            <span>Security</span>
-          </a>
-          <a
-            href="#creative"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-purple-500/10 hover:bg-purple-500/20 text-purple-600 dark:text-purple-400 border border-purple-500/25 hover:border-purple-500/50 hover:shadow-[0_0_15px_-3px_rgba(168,85,247,0.3)] transition-all"
-          >
-            <Palette className="size-3.5 text-purple-500" />
-            <span>Creative</span>
-          </a>
-          <a
-            href="#intellectual"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/25 hover:border-emerald-500/50 hover:shadow-[0_0_15px_-3px_rgba(16,185,129,0.3)] transition-all"
-          >
-            <Brain className="size-3.5 text-emerald-500" />
-            <span>Intellectual</span>
-          </a>
-          <a
-            href="#literature"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/25 hover:border-amber-500/50 hover:shadow-[0_0_15px_-3px_rgba(245,158,11,0.3)] transition-all"
-          >
-            <BookOpen className="size-3.5 text-amber-500" />
-            <span>Literature</span>
-          </a>
+            <a
+              href="#engineering"
+              className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-xs border border-transparent hover:border-border/50 transition-all duration-200"
+            >
+              <span className="size-1.5 rounded-full bg-sky-500/70 group-hover:bg-sky-500 transition-colors" />
+              <span>Engineering</span>
+            </a>
+            <a
+              href="#security"
+              className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-xs border border-transparent hover:border-border/50 transition-all duration-200"
+            >
+              <span className="size-1.5 rounded-full bg-rose-500/70 group-hover:bg-rose-500 transition-colors" />
+              <span>Security</span>
+            </a>
+            <a
+              href="#creative"
+              className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-xs border border-transparent hover:border-border/50 transition-all duration-200"
+            >
+              <span className="size-1.5 rounded-full bg-violet-500/70 group-hover:bg-violet-500 transition-colors" />
+              <span>Creative</span>
+            </a>
+            <a
+              href="#intellectual"
+              className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-xs border border-transparent hover:border-border/50 transition-all duration-200"
+            >
+              <span className="size-1.5 rounded-full bg-emerald-500/70 group-hover:bg-emerald-500 transition-colors" />
+              <span>Intellectual</span>
+            </a>
+            <a
+              href="#literature"
+              className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-xs border border-transparent hover:border-border/50 transition-all duration-200"
+            >
+              <span className="size-1.5 rounded-full bg-amber-500/70 group-hover:bg-amber-500 transition-colors" />
+              <span>Literature</span>
+            </a>
+          </nav>
         </div>
       </BlurFade>
 
