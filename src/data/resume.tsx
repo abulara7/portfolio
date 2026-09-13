@@ -90,8 +90,7 @@ end: "Present",
 description:
   "Architected high-throughput backend services and modern web applications using Node.js, TypeScript, and Next.js. Delivered resilient distributed systems and API architectures.",
     },
-    work: [
-      {
+    {
         company: "Autonomous Engineering Consultant",
         href: "https://www.linkedin.com/in/abulara98",
         badges: ["Remote"],
