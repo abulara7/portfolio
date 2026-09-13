@@ -29,13 +29,8 @@ export default function LiteratureSection() {
       className="space-y-12"
     >
       {/* Header */}
-      <div className="space-y-3">
-        <div className="flex items-center gap-2">
-          <Badge variant="outline" className="border-amber-500/40 text-amber-600 dark:text-amber-400 bg-amber-500/10 text-xs px-2.5 py-0.5">
-            البعد الأدبي • Dimension 4
-          </Badge>
-        </div>
-        <h2 className="text-3xl font-bold tracking-tighter">Literature & Classical Poetry</h2>
+      <div className="space-y-2">
+        <h2 className="text-3xl font-bold tracking-tighter">Literature</h2>
         <p className="text-muted-foreground">
           Epic poetry, long-form existential novels, classical Arabic Mu&apos;allaqat, and literary philosophy.
         </p>
