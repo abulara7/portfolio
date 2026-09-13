@@ -93,44 +93,49 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY * 7}>
               <h2 className="text-xl font-bold">Education</h2>
             </BlurFade>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-3">
               {DATA.education.map((education, index) => (
                 <BlurFade
-                  key={education.school}
+                  key={education.school + education.degree}
                   delay={BLUR_FADE_DELAY * 8 + index * 0.05}
                 >
                   <Link
                     href={education.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-x-3 justify-between group rounded-xl p-2 transition-all hover:bg-muted/30"
+                    className="flex items-center gap-x-3.5 justify-between group rounded-2xl p-3 sm:p-3.5 border border-transparent hover:border-border/70 dark:hover:border-white/10 hover:bg-muted/30 dark:hover:bg-white/[0.03] transition-all duration-300"
                   >
-                    <div className="flex items-center gap-x-3 flex-1 min-w-0">
-                      {education.logoUrl ? (
-                        <img
-                          src={education.logoUrl}
-                          alt={education.school}
-                          className="size-8 md:size-10 p-1 border rounded-full shadow-xs ring-2 ring-border/50 overflow-hidden object-contain flex-none transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 group-hover:shadow-md"
-                        />
-                      ) : (
-                        <div className="size-8 md:size-10 p-1 border rounded-full shadow-xs ring-2 ring-border/50 bg-muted flex-none" />
-                      )}
-                      <div className="flex-1 min-w-0 flex flex-col gap-0.5">
-                        <div className="font-semibold leading-none flex items-center gap-2 text-foreground group-hover:text-primary transition-colors">
-                          {education.school}
+                    <div className="flex items-center gap-x-3.5 flex-1 min-w-0">
+                      <div className="relative group/edu flex-none">
+                        <div className="absolute -inset-1 rounded-full bg-primary/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                        {education.logoUrl ? (
+                          <img
+                            src={education.logoUrl}
+                            alt={education.school}
+                            className="size-10 md:size-12 p-0.5 border border-border/80 dark:border-white/15 rounded-full shadow-md overflow-hidden object-contain flex-none transition-all duration-300 group-hover:scale-115 group-hover:rotate-6 group-hover:ring-2 group-hover:ring-primary/40 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] bg-card dark:bg-[#12141c]"
+                          />
+                        ) : (
+                          <div className="size-10 md:size-12 p-1 border rounded-full shadow-xs ring-2 ring-border/50 bg-muted flex-none" />
+                        )}
+                      </div>
+                      <div className="flex-1 min-w-0 flex flex-col gap-1">
+                        <div className="font-semibold text-sm sm:text-base leading-snug flex items-center gap-2 text-foreground group-hover:text-primary transition-colors">
+                          <span className="truncate">{education.school}</span>
                           <ArrowUpRight
-                            className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
+                            className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 flex-none"
                             aria-hidden
                           />
                         </div>
-                        <div className="font-sans text-sm text-muted-foreground">
+                        <div className="text-xs sm:text-[13px] text-muted-foreground leading-relaxed">
                           {education.degree}
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none font-mono">
+                    <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none font-mono px-2.5 py-1 rounded-md bg-muted/30 dark:bg-white/[0.03] border border-border/40">
                       <span>
-                        {education.start} - {education.end}
+                        {education.start === education.end
+                          ? education.start
+                          : `${education.start} - ${education.end}`}
                       </span>
                     </div>
                   </Link>

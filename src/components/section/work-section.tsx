@@ -17,19 +17,22 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 
   if (!src || imageError) {
     return (
-      <div className="size-8 md:size-10 p-1 border rounded-full shadow-xs ring-2 ring-border/50 bg-muted/50 flex-none" />
+      <div className="size-9 md:size-11 p-1 border rounded-full shadow-xs ring-2 ring-border/50 bg-muted/50 flex-none" />
     );
   }
 
   return (
-    <motion.img
-      whileHover={{ scale: 1.12, rotate: 2 }}
-      transition={{ type: "spring", stiffness: 350, damping: 20 }}
-      src={src}
-      alt={alt}
-      className="size-8 md:size-10 p-1 border rounded-full shadow-xs ring-2 ring-border/50 overflow-hidden object-contain flex-none transition-shadow hover:shadow-md"
-      onError={() => setImageError(true)}
-    />
+    <div className="relative group/logo flex-none">
+      <div className="absolute -inset-1 rounded-full bg-primary/20 blur-sm opacity-0 group-hover/logo:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <motion.img
+        whileHover={{ scale: 1.18, rotate: 6 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
+        src={src}
+        alt={alt}
+        className="size-9 md:size-11 p-0.5 border border-border/80 dark:border-white/15 rounded-full shadow-md overflow-hidden object-contain flex-none transition-all duration-300 group-hover/logo:ring-2 group-hover/logo:ring-primary/50 group-hover/logo:shadow-[0_0_20px_rgba(56,189,248,0.35)] bg-card dark:bg-[#12141c]"
+        onError={() => setImageError(true)}
+      />
+    </div>
   );
 }
 
