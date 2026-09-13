@@ -64,7 +64,7 @@ export default function HackathonsSection() {
                         rel="noopener noreferrer"
                       >
                         <Badge className="flex items-center gap-1.5 text-xs bg-primary text-primary-foreground">
-                          {link.icon}
+                          {link.icon && <link.icon className="size-3" />}
                           {link.title}
                         </Badge>
                       </Link>

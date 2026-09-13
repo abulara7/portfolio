@@ -85,7 +85,7 @@ export const DATA = {
       badges: ["Remote"],
       location: "Remote",
       title: "Lead System Architect & Senior Full-Stack Engineer",
-      logoUrl: "/work.png",
+      logoUrl: "/work.svg",
       start: "2023",
       end: "Present",
       description:
@@ -97,7 +97,7 @@ export const DATA = {
       badges: ["Remote"],
       location: "Remote",
       title: "Senior Backend & Full-Stack Engineer",
-      logoUrl: "/work.png",
+      logoUrl: "/work.svg",
       start: "2021",
       end: "Present",
       description:
@@ -109,7 +109,7 @@ export const DATA = {
       badges: ["Remote"],
       location: "Remote",
       title: "Senior Backend & Cloud Systems Engineer",
-      logoUrl: "/work.png",
+      logoUrl: "/work.svg",
       start: "2021",
       end: "2023",
       description:
@@ -121,7 +121,7 @@ export const DATA = {
       badges: ["Remote"],
       location: "Remote",
       title: "Full-Stack Software Engineer",
-      logoUrl: "/work.png",
+      logoUrl: "/work.svg",
       start: "2019",
       end: "2021",
       description:

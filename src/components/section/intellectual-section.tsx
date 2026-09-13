@@ -2,12 +2,12 @@
 
 import { DATA } from "@/data/resume";
 import { motion } from "motion/react";
-import Link from "next/link";
-import { Icons } from "@/components/icons";
+import { ArrowUpRight } from "lucide-react";
 
 export default function IntellectualSection() {
   return (
     <motion.section
+      id="intellectual"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -107,7 +107,7 @@ export default function IntellectualSection() {
                     <p className="text-sm text-muted-foreground mt-1">{platform.description}</p>
                     <p className="text-xs text-muted-foreground mt-2">{platform.language}</p>
                   </div>
-                  <Icons.externalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors mt-1" />
+                  <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors mt-1" />
                 </div>
               </motion.a>
             ))}

@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 export default function CreativeSection() {
   return (
     <motion.section
+      id="creative"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
