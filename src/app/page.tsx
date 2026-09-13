@@ -13,6 +13,8 @@ import LiteratureSection from "@/components/section/literature-section";
 import SecuritySection from "@/components/section/security-section";
 import HeroAvatar from "@/components/hero-avatar";
 import DimensionNav from "@/components/dimension-nav";
+import DimensionCards from "@/components/dimension-cards";
+import KeyStrengths from "@/components/key-strengths";
 import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -63,6 +65,11 @@ export default function Page() {
         <DimensionNav />
       </BlurFade>
 
+      {/* 4. 3D FEATURED DIMENSION CARDS (MATCHING IMAGE 4) */}
+      <BlurFade delay={BLUR_FADE_DELAY * 4.8}>
+        <DimensionCards />
+      </BlurFade>
+
       {/* ===== DIMENSION 1: ENGINEERING ===== */}
       <div id="engineering" className="flex flex-col gap-14">
         {/* Work */}
@@ -70,6 +77,9 @@ export default function Page() {
           <div className="flex min-h-0 flex-col gap-y-6">
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
               <h2 className="text-xl font-bold">Work Experience</h2>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
+              <KeyStrengths />
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 6}>
               <WorkSection />

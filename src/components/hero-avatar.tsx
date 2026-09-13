@@ -40,8 +40,8 @@ export default function HeroAvatar() {
       onMouseLeave={handleMouseLeave}
       className="relative flex items-center justify-center p-2 cursor-pointer perspective-[1000px] select-none"
     >
-      {/* Ambient Breathing Glow Aura behind Avatar */}
-      <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-sky-500/25 via-purple-500/20 to-amber-500/25 blur-2xl pointer-events-none animate-pulse opacity-80" />
+      {/* Ambient Breathing Neon Halo Aura (Matching Image 4) */}
+      <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-emerald-500/30 via-teal-500/25 to-cyan-500/30 blur-xl pointer-events-none animate-pulse opacity-90" />
 
       {/* 3D Tilting Avatar */}
       <motion.div
@@ -50,21 +50,26 @@ export default function HeroAvatar() {
           rotateY,
           transformStyle: "preserve-3d",
         }}
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.06 }}
         transition={{ type: "spring", stiffness: 400, damping: 25 }}
         className="relative"
       >
-        <Avatar className="size-24 md:size-32 border-2 border-border/80 rounded-full shadow-xl ring-4 ring-muted/60 overflow-hidden">
-          <AvatarImage
-            alt={DATA.name}
-            src={DATA.avatarUrl}
-            className="object-cover size-full transition-transform duration-500 hover:scale-110"
-          />
-          <AvatarFallback>{DATA.initials}</AvatarFallback>
-        </Avatar>
+        {/* Neon Emerald Halo Ring (Image 4 Aesthetic) */}
+        <div className="p-[2.5px] rounded-full bg-gradient-to-tr from-emerald-500 via-teal-400 to-emerald-300 shadow-[0_0_28px_rgba(16,185,129,0.5)]">
+          <div className="p-1 rounded-full bg-background dark:bg-[#0b0c10]">
+            <Avatar className="size-24 md:size-32 rounded-full shadow-2xl overflow-hidden">
+              <AvatarImage
+                alt={DATA.name}
+                src={DATA.avatarUrl}
+                className="object-cover size-full transition-transform duration-700 hover:scale-110"
+              />
+              <AvatarFallback>{DATA.initials}</AvatarFallback>
+            </Avatar>
+          </div>
+        </div>
 
         {/* Floating Active Pulse Indicator */}
-        <div className="absolute bottom-1 right-1 flex items-center justify-center size-5 rounded-full bg-background border-2 border-background shadow-xs">
+        <div className="absolute bottom-1 right-1 flex items-center justify-center size-5 rounded-full bg-background border-2 border-background shadow-[0_0_10px_rgba(16,185,129,0.6)]">
           <span className="size-3 rounded-full bg-emerald-500 animate-pulse" />
         </div>
       </motion.div>
