@@ -19,3 +19,4 @@
   <circle cx="70" cy="70" r="15" fill="#68217a" stroke="#ffffff" stroke-width="2" filter="url(#msGlow)" />
   <text x="70" y="75" font-family="monospace, sans-serif" font-weight="bold" font-size="12" fill="#ffffff" text-anchor="middle">C#</text>
 </svg>
+

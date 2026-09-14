@@ -12,6 +12,8 @@ import IntellectualSection from "@/components/section/intellectual-section";
 import LiteratureSection from "@/components/section/literature-section";
 import SecuritySection from "@/components/section/security-section";
 import HeroAvatar from "@/components/hero-avatar";
+import HeroTitle from "@/components/hero-title";
+import AboutDossier from "@/components/about-dossier";
 import DimensionNav from "@/components/dimension-nav";
 import DimensionCards from "@/components/dimension-cards";
 import KeyStrengths from "@/components/key-strengths";
@@ -25,39 +27,22 @@ export default function Page() {
       {/* 1. HERO SECTION */}
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between items-center md:items-start">
-            <div className="gap-2 flex flex-col order-2 md:order-1">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
-              />
-              <BlurFadeText
-                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl leading-relaxed"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+          <div className="gap-4 gap-y-6 flex flex-col md:flex-row justify-between items-center md:items-start">
+            <div className="order-2 md:order-1 flex-1 min-w-0">
+              <HeroTitle />
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
+            <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2 flex-none">
               <HeroAvatar />
             </BlurFade>
           </div>
         </div>
       </section>
 
-      {/* 2. ABOUT SECTION */}
+      {/* 2. ABOUT SECTION (EXECUTIVE DOSSIER) */}
       <section id="about">
-        <div className="flex min-h-0 flex-col gap-y-4">
-          <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <h2 className="text-xl font-bold">About</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 4}>
-            <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
-              <Markdown>{DATA.summary}</Markdown>
-            </div>
-          </BlurFade>
-        </div>
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <AboutDossier />
+        </BlurFade>
       </section>
 
       {/* 3. FOUR DIMENSIONS FLOATING STICKY SCROLLSPY BAR */}
