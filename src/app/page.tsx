@@ -214,6 +214,20 @@ export default function Page() {
           <ContactSection />
         </BlurFade>
       </section>
+
+      {/* FOOTER & COPYRIGHT */}
+      <footer className="pt-8 pb-16 flex flex-col items-center justify-center gap-2 text-center border-t border-border/40 dark:border-white/[0.05]">
+        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs font-mono text-muted-foreground">
+          <span>&copy; {new Date().getFullYear()}</span>
+          <span className="font-semibold text-foreground">AbuLara</span>
+          <span className="text-muted-foreground/70">({DATA.legalName})</span>
+          <span className="hidden sm:inline text-muted-foreground/40">&bull;</span>
+          <span>All Rights Reserved.</span>
+        </div>
+        <p className="text-[11px] text-muted-foreground/60 font-mono">
+          Architected with High-Throughput Distributed Systems & 3D Web Standards.
+        </p>
+      </footer>
     </main>
   );
 }

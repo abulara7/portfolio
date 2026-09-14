@@ -42,7 +42,7 @@ export default function HeroTitle() {
 
             {/* Glowing Flowing Aurora Text */}
             <span className="relative bg-gradient-to-r from-sky-400 via-purple-400 via-rose-400 to-amber-400 dark:from-sky-300 dark:via-purple-300 dark:via-rose-300 dark:to-amber-300 bg-clip-text text-transparent font-extrabold animate-aurora-text drop-shadow-[0_2px_15px_rgba(56,189,248,0.35)]">
-              {DATA.name.split(" ")[0]}
+              {DATA.name}
             </span>
 
             {/* Verified Polymath Badge */}
@@ -51,6 +51,17 @@ export default function HeroTitle() {
             </span>
           </span>
         </h1>
+
+        {/* Legal Name Subtitle Badge (The Smart Executive Fusion) */}
+        <div className="flex items-center gap-2 mt-2">
+          <span className="text-xs sm:text-sm font-mono text-muted-foreground/90 tracking-wide font-medium">
+            {DATA.legalName}
+          </span>
+          <span className="text-muted-foreground/40">•</span>
+          <span className="text-[11px] font-mono text-muted-foreground/70">
+            Legal & Academic Identity
+          </span>
+        </div>
       </motion.div>
 
       {/* Dynamic Subtitle */}
@@ -102,3 +113,4 @@ export default function HeroTitle() {
     </div>
   );
 }
+

@@ -13,8 +13,9 @@ import { Java } from "@/components/ui/svgs/java";
 import { Csharp } from "@/components/ui/svgs/csharp";
 
 export const DATA = {
-  name: "Haider Alanisi",
-  initials: "HA",
+  name: "AbuLara",
+  legalName: "Haider Alanisi",
+  initials: "AL",
   url: "https://portfolio-ten-mauve-xbap89iflq.vercel.app",
   location: "Karbala, Iraq",
   locationLink: "https://www.google.com/maps/place/Karbala",
